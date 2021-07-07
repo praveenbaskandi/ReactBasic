@@ -21,3 +21,5 @@ Library added in the project
 5. yarn add react-native-safe-area-context 
 6. yarn add @react-native-community/masked-view
 
+// Tost 
+1. yarn add react-native-notification-banner
