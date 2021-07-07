@@ -23,3 +23,4 @@ Library added in the project
 
 // Tost 
 1. yarn add react-native-notification-banner
+2. yarn add react-native-vector-icons
