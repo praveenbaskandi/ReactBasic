@@ -49,6 +49,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+<array>
+  <string>fontello.ttf</string>
+  <string>Effra-Black.ttf</string>
+  <string>Effra-Bold.ttf</string>
+  <string>Effra-Heavy.ttf</string>
+  <string>Effra-Regular.ttf</string>
+  <string>EffraMedium-Regular.ttf</string>
+</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

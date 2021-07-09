@@ -6,12 +6,14 @@ import {useNavigation} from '@react-navigation/native';
 import styles from './style.js';
 
 const DATA = [
-  {text: 'Button', nav: 'ButtonUI'},
+  {text: 'Button', nav: 'ButtonPage'},
   {text: 'Input Text', nav: 'InputText'},
+  {text: 'Icon Page', nav: 'IconPage'},
   {text: 'Flat List', nav: ''},
   {text: 'Horizontall Scroll', nav: ''},
   {text: 'Text', nav: ''},
   {text: 'Input', nav: ''},
+  {text: 'Toast Page', nav: 'ToastPage'},
   {text: 'Increment Number', nav: 'IncrementNumber'},
 ];
 

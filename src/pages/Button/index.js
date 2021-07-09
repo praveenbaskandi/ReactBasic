@@ -1,22 +1,22 @@
 import React from 'react';
-import {Button, ScrollView, SafeAreaView, View} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-import styles from './style.js';
+import ButtonUI from '../../UI/Button';
+import Header from '../../UI/Header';
+import styles from './style';
 
-const ButtonUI = () => {
+const ButtonPage = () => {
+  const heading = 'Button Page';
+  const navigation = useNavigation();
   const clickMe = 'Click Me!';
   return (
-    <SafeAreaView>
-      <ScrollView style={styles.container}>
-        <View style={styles.buttonViewRound}>
-          <Button title={clickMe} />
-        </View>
-        <View style={styles.buttonViewRound}>
-          <Button style={styles.buttonViewRound} title={clickMe} />
-        </View>
-      </ScrollView>
+    <SafeAreaView style={styles.container}>
+      <Header text={heading} click={navigation.goBack} />
+      <ButtonUI btnText={clickMe} style={1} />
+      <ButtonUI btnText={clickMe} style={2} />
     </SafeAreaView>
   );
 };
 
-export default ButtonUI;
+export default ButtonPage;

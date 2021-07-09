@@ -11,20 +11,16 @@ const IncrementNumber = () => {
   const {incrementData} = useSelect();
   const clickMe = 'Click Me !';
   const onPressButton = () => {
-    console.warn('enter the function');
     const added = Number(incrementData) + 1;
-    console.warn('added', added);
     dispatch(updateIncrementData(added.toString()));
   };
-
-  console.warn(incrementData);
 
   return (
     <SafeAreaView>
       <ScrollView style={styles.container}>
         <Text style={styles.textData}>{incrementData}</Text>
         <View style={styles.buttonViewRound}>
-          <Button onPress={onPressButton} title={clickMe} />
+          <Button color="#f194ff" onPress={onPressButton} title={clickMe} />
         </View>
       </ScrollView>
     </SafeAreaView>

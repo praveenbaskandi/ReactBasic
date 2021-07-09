@@ -1,5 +1,6 @@
 PODS:
   - boost-for-react-native (1.63.0)
+  - BRYXBanner (0.8.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.64.2)
@@ -322,6 +323,12 @@ PODS:
     - React
   - RNGestureHandler (1.10.3):
     - React-Core
+  - RNImageHelper (0.0.3):
+    - React
+  - RNNotificationBanner (2.0.0):
+    - BRYXBanner
+    - React
+    - RNImageHelper
   - RNReanimated (2.2.0):
     - DoubleConversion
     - FBLazyVector
@@ -354,11 +361,14 @@ PODS:
   - RNScreens (3.4.0):
     - React-Core
     - React-RCTImage
+  - RNVectorIcons (8.1.0):
+    - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - BRYXBanner (from `https://github.com/prscX/BRYXBanner.git`, branch `master`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -410,8 +420,11 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNImageHelper (from `../node_modules/react-native-image-helper/ios`)
+  - RNNotificationBanner (from `../node_modules/react-native-notification-banner/ios`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -430,6 +443,9 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
+  BRYXBanner:
+    :branch: master
+    :git: https://github.com/prscX/BRYXBanner.git
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -490,19 +506,31 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
+  RNImageHelper:
+    :path: "../node_modules/react-native-image-helper/ios"
+  RNNotificationBanner:
+    :path: "../node_modules/react-native-notification-banner/ios"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
+CHECKOUT OPTIONS:
+  BRYXBanner:
+    :commit: 2734e654bd28733097d5b0fd353ce568df6dc4ad
+    :git: https://github.com/prscX/BRYXBanner.git
+
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  BRYXBanner: 531fa5c5089d15110f5136741a60c756f1ef89a7
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
-  FBReactNativeSpec: 20e6a8ff582fa8f38fddb4bcae69472a4278cbff
+  FBReactNativeSpec: 5205b55675721a9cdfe55d4002bcad339224a39b
   Flipper: d3da1aa199aad94455ae725e9f3aa43f3ec17021
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
   Flipper-Folly: 755929a4f851b2fb2c347d533a23f191b008554c
@@ -539,11 +567,14 @@ SPEC CHECKSUMS:
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
+  RNImageHelper: efb1e1b39f0e19a40b8873c2c1c9614c0dd150ed
+  RNNotificationBanner: 194cc05566447dacbf6ba3127f63b8a04bd8813e
   RNReanimated: 9c13c86454bfd54dab7505c1a054470bfecd2563
   RNScreens: 21b73c94c9117e1110a79ee0ee80c93ccefed8ce
+  RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 2a1e40ed852cad8dc7578103424f6e197f8cd774
+PODFILE CHECKSUM: a837049d99c950c3b6d68faab2074ab97a4020b5
 
 COCOAPODS: 1.10.1

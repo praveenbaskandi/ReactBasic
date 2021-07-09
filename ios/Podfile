@@ -23,7 +23,23 @@ target 'ReactBasic' do
   # you should disable the next line.
   use_flipper!()
 
+  pod 'RNNotificationBanner', :path => '../node_modules/react-native-notification-banner/ios'
+  pod 'BRYXBanner', :git => 'https://github.com/prscX/BRYXBanner.git', :branch => 'master'
+  pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga', :modular_headers => true
+
   post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if target.name.include?('BRYXBanner')
+        target.build_configurations.each do |config|
+          config.build_settings['SWIFT_VERSION'] = '4.2'
+        end
+      end
+    end
+    if target.name == 'YogaKit'
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.1'
+      end
+    end
     react_native_post_install(installer)
   end
 end
