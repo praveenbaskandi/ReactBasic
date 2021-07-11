@@ -7,6 +7,7 @@ import InputText from '../pages/InputText';
 import IncrementNumber from '../pages/NumberIncrement';
 import ToastPage from '../pages/ToastPage';
 import IconPage from '../pages/IconPage';
+import CrousalHorizontalPage from '../pages/CrousalHorizontalPage';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,10 @@ const Navigation = () => {
       <Stack.Screen name="IncrementNumber" component={IncrementNumber} />
       <Stack.Screen name="ToastPage" component={ToastPage} />
       <Stack.Screen name="IconPage" component={IconPage} />
+      <Stack.Screen
+        name="HorizontalScrollPage"
+        component={CrousalHorizontalPage}
+      />
     </Stack.Navigator>
   );
 };

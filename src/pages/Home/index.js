@@ -10,7 +10,7 @@ const DATA = [
   {text: 'Input Text', nav: 'InputText'},
   {text: 'Icon Page', nav: 'IconPage'},
   {text: 'Flat List', nav: ''},
-  {text: 'Horizontall Scroll', nav: ''},
+  {text: 'Horizontall Scroll', nav: 'HorizontalScrollPage'},
   {text: 'Text', nav: ''},
   {text: 'Input', nav: ''},
   {text: 'Toast Page', nav: 'ToastPage'},

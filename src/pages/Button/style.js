@@ -4,6 +4,7 @@ export default StyleSheet.create({
   container: {
     backgroundColor: '#FFFFFF',
     flex: 1,
+    paddingTop: 20,
   },
 
   buttonViewRound: {

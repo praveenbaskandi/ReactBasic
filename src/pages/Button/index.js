@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import ButtonUI from '../../UI/Button';
@@ -12,6 +12,11 @@ const ButtonPage = () => {
   const clickMe = 'Click Me!';
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar
+        barStyle="dark-content"
+        translucent
+        backgroundColor="transparent"
+      />
       <Header text={heading} click={navigation.goBack} />
       <ButtonUI btnText={clickMe} style={1} />
       <ButtonUI btnText={clickMe} style={2} />
