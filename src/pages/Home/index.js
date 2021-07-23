@@ -11,7 +11,7 @@ const DATA = [
   {text: 'Icon Page', nav: 'IconPage'},
   {text: 'Flat List', nav: ''},
   {text: 'Horizontall Scroll', nav: 'HorizontalScrollPage'},
-  {text: 'Text', nav: ''},
+  {text: 'Local Storage', nav: 'LocalStorage'},
   {text: 'Input', nav: ''},
   {text: 'Toast Page', nav: 'ToastPage'},
   {text: 'Increment Number', nav: 'IncrementNumber'},

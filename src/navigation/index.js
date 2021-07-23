@@ -8,6 +8,7 @@ import IncrementNumber from '../pages/NumberIncrement';
 import ToastPage from '../pages/ToastPage';
 import IconPage from '../pages/IconPage';
 import CrousalHorizontalPage from '../pages/CrousalHorizontalPage';
+import LocalStoragePage from '../pages/LocalStoragePage';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ const Navigation = () => {
       <Stack.Screen name="IncrementNumber" component={IncrementNumber} />
       <Stack.Screen name="ToastPage" component={ToastPage} />
       <Stack.Screen name="IconPage" component={IconPage} />
+      <Stack.Screen name="LocalStorage" component={LocalStoragePage} />
       <Stack.Screen
         name="HorizontalScrollPage"
         component={CrousalHorizontalPage}

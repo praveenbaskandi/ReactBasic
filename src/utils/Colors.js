@@ -1,3 +1,7 @@
+import {getStatusBarHeight} from 'react-native-status-bar-height';
+
+const statusbarHeight = getStatusBarHeight();
+
 const Colors = {
   success: '#09ce89',
   warning: '#ffd03b',

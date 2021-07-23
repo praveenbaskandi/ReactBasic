@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-import {Colors, Fonts} from '../../utils/Colors';
+import {Colors, Fonts, statusbarHeight} from '../../utils/Colors';
 
 export default StyleSheet.create({
   pageContainer: {
@@ -9,6 +9,7 @@ export default StyleSheet.create({
   container: {
     flexDirection: 'column',
     flexGrow: 1,
+    paddingTop: statusbarHeight,
     justifyContent: 'space-between',
   },
   buttonText: {
@@ -41,16 +42,13 @@ export default StyleSheet.create({
   pageHeading: {
     color: '#252935',
     fontSize: 16,
-    marginTop: 30,
-    fontFamily: Fonts.muliBold,
+    marginTop: 50,
+    fontFamily: Fonts.muliBlack,
     lineHeight: 22,
     alignSelf: 'center',
   },
   pageImage: {
-    fontSize: 16,
-    marginTop: 20,
-    fontFamily: Fonts.muliBold,
-    lineHeight: 22,
+    height: 150,
     alignSelf: 'center',
   },
   pageSubHeading: {
