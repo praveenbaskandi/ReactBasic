@@ -25,3 +25,6 @@ Library added in the project
 1. yarn add react-native-notification-banner
 2. yarn add react-native-vector-icons
 3. yarn add react-native-image-helper
+
+// Local Async storage
+1. yarn add @react-native-async-storage/async-storage
