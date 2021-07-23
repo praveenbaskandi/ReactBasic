@@ -2,18 +2,18 @@
 
 Library added in the project
 
-# redux
+### redux
 1. yarn add redux
 2. yarn add react-redux
 3. yarn add redux-thunk
 
-# status bar height
+### status bar height
 1. yarn add react-native-status-bar-height
 
-# size matter 
+### size matter 
 1. yarn add react-native-size-matters
 
-# Navigation
+### Navigation
 1. yarn add @react-navigation/native
 2. yarn add react-native-reanimated 
 3. yarn add react-native-gesture-handler 
@@ -21,10 +21,10 @@ Library added in the project
 5. yarn add react-native-safe-area-context 
 6. yarn add @react-native-community/masked-view
 
-# Toast 
+### Toast 
 1. yarn add react-native-notification-banner
 2. yarn add react-native-vector-icons
 3. yarn add react-native-image-helper
 
-# Local Async storage
+### Local Async storage
 1. yarn add @react-native-async-storage/async-storage
