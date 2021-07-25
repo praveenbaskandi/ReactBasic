@@ -9,10 +9,10 @@ const DATA = [
   {text: 'Button', nav: 'ButtonPage'},
   {text: 'Input Text', nav: 'InputText'},
   {text: 'Icon Page', nav: 'IconPage'},
-  {text: 'Flat List', nav: ''},
   {text: 'Horizontall Scroll', nav: 'HorizontalScrollPage'},
   {text: 'Local Storage', nav: 'LocalStorage'},
-  {text: 'Input', nav: ''},
+  {text: 'Loader Page', nav: 'LoaderPage'},
+  {text: 'Flat List', nav: ''},
   {text: 'Toast Page', nav: 'ToastPage'},
   {text: 'Increment Number', nav: 'IncrementNumber'},
 ];
