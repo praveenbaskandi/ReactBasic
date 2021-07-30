@@ -10,7 +10,7 @@ export default ScaledSheet.create({
     textAlign: 'center',
   },
   containerView: {
-    backgroundColor: '#43a1c9',
+    backgroundColor: '#FFFFFF',
     borderTopLeftRadius: '15@ms',
     borderTopRightRadius: '15@ms',
     justifyContent: 'center',

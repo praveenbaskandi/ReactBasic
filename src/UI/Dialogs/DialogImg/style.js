@@ -8,7 +8,8 @@ export default ScaledSheet.create({
     alignSelf: 'center',
     borderRadius: '15@ms',
     maxWidth: '355@ms',
-    width: windowWidth - 40,
+    width: '100%',
+    padding: '10@ms',
     backgroundColor: '#FFFFFF',
   },
   title: {

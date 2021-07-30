@@ -3,10 +3,13 @@ import {StyleSheet} from 'react-native';
 import {Colors} from '../../utils/Colors';
 
 export default StyleSheet.create({
+  container: {
+    paddingHorizontal: 20,
+  },
   buttonOrange: {
     backgroundColor: Colors.glOrange,
-    marginHorizontal: 20,
     height: 40,
+    width: '100%',
     marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',
@@ -14,8 +17,8 @@ export default StyleSheet.create({
   },
   buttonGrey: {
     backgroundColor: Colors.glGrey,
-    marginHorizontal: 20,
     height: 40,
+    width: '100%',
     marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',

@@ -11,7 +11,7 @@ const LoaderPage = () => {
   const navigation = useNavigation();
 
   return (
-    <View>
+    <View style={styles.mainContainer}>
       <Header text={heading} click={navigation.goBack} />
       <View style={styles.container}>
         <Loader size={10} />

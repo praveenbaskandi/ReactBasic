@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, Text} from 'react-native';
+import {View, TouchableOpacity, Text} from 'react-native';
 import {string, number, func} from 'prop-types';
 
 import styles from './style.js';
@@ -15,9 +15,11 @@ const ButtonUI = ({btnText, style, click}) => {
     return styles.buttonGrey;
   };
   return (
-    <TouchableOpacity style={styleSelect(style)} onPress={click}>
-      <Text style={styles.buttonText}>{btnText}</Text>
-    </TouchableOpacity>
+    <View style={styles.container}>
+      <TouchableOpacity style={styleSelect(style)} onPress={click}>
+        <Text style={styles.buttonText}>{btnText}</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
