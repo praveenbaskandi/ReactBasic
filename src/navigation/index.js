@@ -10,6 +10,7 @@ import IconPage from '../pages/IconPage';
 import CrousalHorizontalPage from '../pages/CrousalHorizontalPage';
 import LocalStoragePage from '../pages/LocalStoragePage';
 import LoaderPage from '../pages/LoaderPage';
+import DialogPage from '../pages/DialogPage';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,7 @@ const Navigation = () => {
       <Stack.Screen name="IconPage" component={IconPage} />
       <Stack.Screen name="LocalStorage" component={LocalStoragePage} />
       <Stack.Screen name="LoaderPage" component={LoaderPage} />
+      <Stack.Screen name="DialogPage" component={DialogPage} />
       <Stack.Screen
         name="HorizontalScrollPage"
         component={CrousalHorizontalPage}
