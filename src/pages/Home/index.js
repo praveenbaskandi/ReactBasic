@@ -13,6 +13,7 @@ const DATA = [
   {text: 'Local Storage', nav: 'LocalStorage'},
   {text: 'Loader Page', nav: 'LoaderPage'},
   {text: 'Dialog Page', nav: 'DialogPage'},
+  {text: 'Bottom Nav Page', nav: 'BottomNav'},
   {text: 'Flat List', nav: ''},
   {text: 'Toast Page', nav: 'ToastPage'},
   {text: 'Increment Number', nav: 'IncrementNumber'},

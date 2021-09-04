@@ -11,6 +11,7 @@ import CrousalHorizontalPage from '../pages/CrousalHorizontalPage';
 import LocalStoragePage from '../pages/LocalStoragePage';
 import LoaderPage from '../pages/LoaderPage';
 import DialogPage from '../pages/DialogPage';
+import BottomNav from './BottomNav';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ const Navigation = () => {
         name="HorizontalScrollPage"
         component={CrousalHorizontalPage}
       />
+      <Stack.Screen name="BottomNav" component={BottomNav} />
     </Stack.Navigator>
   );
 };
