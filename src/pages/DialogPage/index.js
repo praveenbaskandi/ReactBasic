@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import BottomDialog from '../../UI/Dialogs/BottomDialog';
@@ -21,11 +21,6 @@ const ButtonPage = () => {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar
-        barStyle="dark-content"
-        translucent
-        backgroundColor="transparent"
-      />
       <Header text={heading} click={navigation.goBack} />
       <ButtonUI
         btnText={dialogCenter}

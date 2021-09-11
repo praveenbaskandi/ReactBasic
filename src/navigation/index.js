@@ -11,6 +11,8 @@ import CrousalHorizontalPage from '../pages/CrousalHorizontalPage';
 import LocalStoragePage from '../pages/LocalStoragePage';
 import LoaderPage from '../pages/LoaderPage';
 import DialogPage from '../pages/DialogPage';
+import ReduxForm from '../pages/ReduxForm';
+import FlatList from '../pages/FlatListPage';
 import BottomNav from './BottomNav';
 
 const Stack = createStackNavigator();
@@ -31,6 +33,8 @@ const Navigation = () => {
         name="HorizontalScrollPage"
         component={CrousalHorizontalPage}
       />
+      <Stack.Screen name="ReduxForm" component={ReduxForm} />
+      <Stack.Screen name="FlatList" component={FlatList} />
       <Stack.Screen name="BottomNav" component={BottomNav} />
     </Stack.Navigator>
   );

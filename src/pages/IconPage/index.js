@@ -10,7 +10,7 @@ const IconPage = () => {
   const heading = 'Icon Page';
   const navigation = useNavigation();
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.containerTop}>
       <Header text={heading} click={navigation.goBack} />
       <View style={styles.container}>
         <Icon name="star-empty" size={10} color="#000000" style={styles.icon} />

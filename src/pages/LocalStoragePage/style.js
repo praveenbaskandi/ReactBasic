@@ -7,6 +7,10 @@ export default ScaledSheet.create({
     marginTop: 5,
     paddingHorizontal: 20,
   },
+  containerTop: {
+    backgroundColor: '#FFFFFF',
+    flex: 1,
+  },
   icon: {
     margin: 5,
   },

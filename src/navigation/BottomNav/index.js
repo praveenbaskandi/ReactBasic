@@ -1,8 +1,9 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import HomeScreen from '../../pages/BottomNav/NavHome';
-import SettingScreen from '../../pages/BottomNav/NavSetting';
+import BallScreen from '../../pages/BottomNav/NavBall';
+import FolderScreen from '../../pages/BottomNav/NavFolder';
+import ThumbScreen from '../../pages/BottomNav/NavThumb';
 import Icon from '../../UI/Icons';
 
 const Tab = createBottomTabNavigator();
@@ -12,7 +13,7 @@ const BottomNav = () => {
     <Tab.Navigator>
       <Tab.Screen
         name="Ball"
-        component={HomeScreen}
+        component={BallScreen}
         options={{
           tabBarLabel: 'ball',
           tabBarIcon: ({color, size}) => (
@@ -22,11 +23,21 @@ const BottomNav = () => {
       />
       <Tab.Screen
         name="Folder"
-        component={SettingScreen}
+        component={FolderScreen}
         options={{
           tabBarLabel: 'folder',
           tabBarIcon: ({color, size}) => (
             <Icon name="folder" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Thumb"
+        component={ThumbScreen}
+        options={{
+          tabBarLabel: 'thumb',
+          tabBarIcon: ({color, size}) => (
+            <Icon name="thumbs-up-alt" color={color} size={size} />
           ),
         }}
       />

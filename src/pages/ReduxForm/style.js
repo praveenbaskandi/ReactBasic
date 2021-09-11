@@ -5,15 +5,11 @@ export default StyleSheet.create({
     backgroundColor: '#FFFFFF',
     flex: 1,
   },
+
   buttonViewRound: {
     backgroundColor: '#000000',
     marginHorizontal: 50,
     borderRadius: 10,
     marginTop: 10,
-  },
-  textData: {
-    textAlign: 'center',
-    fontSize: 20,
-    color: '#000000',
   },
 });

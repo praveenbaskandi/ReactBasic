@@ -2,9 +2,8 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    padding: 10,
-    paddingVertical: 20,
-    alignSelf: 'stretch',
+    backgroundColor: '#FFFFFF',
+    flex: 1,
     justifyContent: 'center',
   },
   buttonText: {

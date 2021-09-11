@@ -3,8 +3,8 @@ import {Text, SafeAreaView} from 'react-native';
 
 import styles from './style';
 
-const NavHome = () => {
-  const homeText = 'Home Screen';
+const NavFolder = () => {
+  const homeText = 'Folder Screen';
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.textStyle}>{homeText}</Text>
@@ -12,4 +12,4 @@ const NavHome = () => {
   );
 };
 
-export default NavHome;
+export default NavFolder;

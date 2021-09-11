@@ -3,6 +3,7 @@ import {Text, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
 import {func} from 'prop-types';
 import {useNavigation} from '@react-navigation/native';
 
+import Header from '../../UI/Header';
 import styles from './style.js';
 
 const DATA = [
@@ -14,12 +15,14 @@ const DATA = [
   {text: 'Loader Page', nav: 'LoaderPage'},
   {text: 'Dialog Page', nav: 'DialogPage'},
   {text: 'Bottom Nav Page', nav: 'BottomNav'},
-  {text: 'Flat List', nav: ''},
+  {text: 'Redux Form', nav: 'ReduxForm'},
+  {text: 'Flat List', nav: 'FlatList'},
   {text: 'Toast Page', nav: 'ToastPage'},
   {text: 'Increment Number', nav: 'IncrementNumber'},
 ];
 
 const Home = () => {
+  const heading = 'Home';
   const navigation = useNavigation();
   const clickItem = navName => {
     navigation.navigate(navName);
@@ -38,6 +41,7 @@ const Home = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Header text={heading} click={navigation.goBack} />
       <FlatList
         data={DATA}
         renderItem={renderItem}

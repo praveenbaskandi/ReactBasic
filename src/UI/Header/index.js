@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
+import {Text, StatusBar, SafeAreaView} from 'react-native';
 import {string, func} from 'prop-types';
 
 import Icon from '../../UI/Icons';
@@ -9,9 +9,14 @@ import styles from './style.js';
 const Header = ({text, click}) => {
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar
+        barStyle="dark-content"
+        translucent
+        backgroundColor="transparent"
+      />
       <Icon
         name="angle-left"
-        size={20}
+        size={30}
         color={Colors.glTextGen}
         style={styles.icon}
         onPress={click}

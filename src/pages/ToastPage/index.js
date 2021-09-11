@@ -37,7 +37,7 @@ const ToastPage = () => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.containerTop}>
       <Header text={heading} click={navigation.goBack} />
       <View style={styles.container}>
         <Button click={onPressSuccess} btnText={clickMeSuccess} />

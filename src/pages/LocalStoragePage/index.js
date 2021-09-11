@@ -30,7 +30,7 @@ const LocalStoragePage = () => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.containerTop}>
       <Header text={heading} click={navigation.goBack} />
       <View style={styles.container}>
         <Text style={styles.textStyle}>{localText}</Text>

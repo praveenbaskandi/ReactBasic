@@ -8,7 +8,7 @@ import styles from './style';
 const InputText = ({navigation}) => {
   const heading = 'Input Text Page';
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.containerTop}>
       <Header text={heading} click={navigation.goBack} />
       <ScrollView style={styles.container}>
         <TextInput

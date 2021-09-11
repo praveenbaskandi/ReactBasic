@@ -3,8 +3,8 @@ import {Text, SafeAreaView} from 'react-native';
 
 import styles from './style';
 
-const NavSetting = () => {
-  const homeText = 'Setting Screen';
+const NavBall = () => {
+  const homeText = 'Ball Screen';
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.textStyle}>{homeText}</Text>
@@ -12,4 +12,4 @@ const NavSetting = () => {
   );
 };
 
-export default NavSetting;
+export default NavBall;

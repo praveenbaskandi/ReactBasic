@@ -6,8 +6,8 @@ import ButtonUI from '../../UI/Button';
 import Header from '../../UI/Header';
 import styles from './style';
 
-const ButtonPage = () => {
-  const heading = 'Button Page';
+const ReduxForm = () => {
+  const heading = 'Redux Form';
   const navigation = useNavigation();
   const clickMe = 'Click Me!';
   return (
@@ -19,4 +19,4 @@ const ButtonPage = () => {
   );
 };
 
-export default ButtonPage;
+export default ReduxForm;

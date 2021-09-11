@@ -3,6 +3,10 @@ import {ScaledSheet} from 'react-native-size-matters';
 import {Colors} from '../../utils/Colors';
 
 export default ScaledSheet.create({
+  containerTop: {
+    backgroundColor: '#FFFFFF',
+    flex: 1,
+  },
   container: {
     backgroundColor: '#50000000',
   },
