@@ -1,4 +1,4 @@
-import {ScaledSheet} from 'react-native-size-matters';
+import {ScaledSheet, Scale} from 'react-native-size-matters';
 
 export default ScaledSheet.create({
   contentWrapper: {

@@ -1,32 +1,30 @@
 import React from 'react';
-import {View, TouchableOpacity, Text} from 'react-native';
-import {string, number, func} from 'prop-types';
+import {string, func, number} from 'prop-types';
 
-import styles from './style.js';
+import * as S from './style';
 
-const ButtonUI = ({btnText, style, click}) => {
-  const styleSelect = () => {
-    if (style === 1) {
-      return styles.buttonOrange;
-    }
-    if (style === 2) {
-      return styles.buttonGrey;
-    }
-    return styles.buttonGrey;
-  };
+const ButtonUI = ({btnText, click, mt, mb, fontSize}) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styleSelect(style)} onPress={click}>
-        <Text style={styles.buttonText}>{btnText}</Text>
-      </TouchableOpacity>
-    </View>
+    <S.Container>
+      <S.Cover onPress={click} mt={mt} mb={mb}>
+        <S.Text font={fontSize}>{btnText}</S.Text>
+      </S.Cover>
+    </S.Container>
   );
 };
 
 ButtonUI.propTypes = {
   btnText: string.isRequired,
-  style: number.isRequired,
   click: func.isRequired,
+  mt: number,
+  mb: number,
+  fontSize: number,
+};
+
+ButtonUI.defaultProps = {
+  mt: 0,
+  mb: 0,
+  fontSize: 15,
 };
 
 export default ButtonUI;

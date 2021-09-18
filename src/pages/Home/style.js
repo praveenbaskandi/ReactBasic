@@ -1,21 +1,26 @@
-import {StyleSheet} from 'react-native';
+import styled from 'styled-components/native';
+import {scale} from 'react-native-size-matters';
 
-export default StyleSheet.create({
-  container: {
-    backgroundColor: '#FFFFFF',
-    flex: 1,
-    justifyContent: 'center',
-  },
-  buttonText: {
-    fontSize: 15,
-    color: '#FFFFFF',
-    textAlign: 'center',
-  },
-  containerView: {
-    backgroundColor: '#43a1c9',
-    marginVertical: 5,
-    marginHorizontal: 10,
-    borderRadius: 4,
-    paddingVertical: 5,
-  },
-});
+import {Title} from '../../UI/Text';
+import {Colors} from '../../utils/Colors';
+
+export const Container = styled.View`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Text = styled(Title)`
+  font-size: ${scale(10)};
+  color: ${Colors.white};
+  text-align: center;
+  line-height: ${scale(10)};
+`;
+
+export const ContainerCover = styled.TouchableOpacity`
+  background-color: ${Colors.glBlue};
+  margin-horizontal: ${scale(10)};
+  margin-vertical: ${scale(5)};
+  border-radius: ${scale(5)};
+  height: ${scale(25)};
+  justify-content: center;
+`;

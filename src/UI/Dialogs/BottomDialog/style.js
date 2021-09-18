@@ -1,21 +1,25 @@
-import {ScaledSheet} from 'react-native-size-matters';
+import styled from 'styled-components/native';
+import {scale} from 'react-native-size-matters';
 
-export default ScaledSheet.create({
-  container: {
-    backgroundColor: '#FFFFFF',
-    width: '100%',
-    paddingBottom: 10,
-  },
-  title: {
-    alignItems: 'center',
-    color: '#000000',
-    textAlign: 'center',
-    fontSize: '20@ms',
-  },
-  subTitle: {
-    alignItems: 'center',
-    color: '#000000',
-    fontSize: '10@ms',
-    textAlign: 'center',
-  },
-});
+import {Title} from '../../Text';
+import {Colors} from '../../../utils/Colors';
+
+export const Container = styled.ScrollView`
+  width: 100%;
+  background-color: ${Colors.white};
+  padding-bottom: ${scale(10)};
+`;
+
+export const TitleText = styled(Title)`
+  font-size: ${scale(20)};
+  color: ${Colors.glBlack};
+  text-align: center;
+  line-height: ${scale(20)};
+`;
+
+export const SubText = styled(Title)`
+  font-size: ${scale(10)};
+  color: ${Colors.glBlack};
+  text-align: center;
+  line-height: ${scale(15)};
+`;

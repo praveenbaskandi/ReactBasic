@@ -1,34 +1,25 @@
 import React from 'react';
-import {Text, StatusBar, SafeAreaView} from 'react-native';
-import {string, func} from 'prop-types';
+import {string, func, number} from 'prop-types';
 
-import Icon from '../../UI/Icons';
-import {Colors} from '../../utils/Colors';
-import styles from './style.js';
+import * as S from './style';
 
-const Header = ({text, click}) => {
+const Header = ({text, click, textFont}) => {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar
-        barStyle="dark-content"
-        translucent
-        backgroundColor="transparent"
-      />
-      <Icon
-        name="angle-left"
-        size={30}
-        color={Colors.glTextGen}
-        style={styles.icon}
-        onPress={click}
-      />
-      <Text style={styles.textStyle}>{text}</Text>
-    </SafeAreaView>
+    <S.Container>
+      <S.BackIcon name="angle-left" onPress={click} />
+      <S.Text font={textFont}>{text}</S.Text>
+    </S.Container>
   );
 };
 
 Header.propTypes = {
   text: string.isRequired,
   click: func.isRequired,
+  textFont: number,
+};
+
+Header.defaultProps = {
+  textFont: 15,
 };
 
 export default Header;

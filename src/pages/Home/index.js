@@ -1,10 +1,10 @@
 import React from 'react';
-import {Text, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
+import {FlatList} from 'react-native';
 import {func} from 'prop-types';
 import {useNavigation} from '@react-navigation/native';
 
 import Header from '../../UI/Header';
-import styles from './style.js';
+import * as S from './style';
 
 const DATA = [
   {text: 'Button', nav: 'ButtonPage'},
@@ -29,25 +29,24 @@ const Home = () => {
   };
 
   const renderItem = ({item}) => (
-    <TouchableOpacity
+    <S.ContainerCover
       id={item.text}
-      style={styles.containerView}
       onPress={() => {
         clickItem(item.nav);
       }}>
-      <Text style={styles.buttonText}>{item.text}</Text>
-    </TouchableOpacity>
+      <S.Text>{item.text}</S.Text>
+    </S.ContainerCover>
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <S.Container>
       <Header text={heading} click={navigation.goBack} />
       <FlatList
         data={DATA}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
-    </SafeAreaView>
+    </S.Container>
   );
 };
 

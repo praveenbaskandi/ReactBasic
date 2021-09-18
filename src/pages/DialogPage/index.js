@@ -24,14 +24,14 @@ const ButtonPage = () => {
       <Header text={heading} click={navigation.goBack} />
       <ButtonUI
         btnText={dialogCenter}
-        style={1}
+        mt={10}
         click={() => {
           updateShow(true);
         }}
       />
       <ButtonUI
         btnText={dialogBottom}
-        style={2}
+        mt={10}
         click={() => {
           updateShowBottomDialog(true);
         }}

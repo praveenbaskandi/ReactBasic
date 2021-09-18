@@ -1,10 +1,9 @@
 import React from 'react';
-import {ScrollView, Text} from 'react-native';
 import {arrayOf, node, oneOfType, string, func} from 'prop-types';
 
 import Button from '../../Button';
 import Dialog from '../Dialog';
-import style from './style';
+import * as S from './style';
 
 const BottomDialog = ({
   buttons,
@@ -17,12 +16,12 @@ const BottomDialog = ({
 }) => {
   return (
     <Dialog {...rest}>
-      <ScrollView style={style.container} showsVerticalScrollIndicator={false}>
-        {title && <Text style={style.title}>{title}</Text>}
-        {subTitle && <Text style={style.subTitle}>{subTitle}</Text>}
+      <S.Container showsVerticalScrollIndicator={false}>
+        {title && <S.TitleText>{title}</S.TitleText>}
+        {subTitle && <S.SubText>{subTitle}</S.SubText>}
         <>{children}</>
-        <Button btnText={btnText} style={1} click={buttonClick} />
-      </ScrollView>
+        <Button btnText={btnText} click={buttonClick} mt={20} />
+      </S.Container>
     </Dialog>
   );
 };

@@ -1,11 +1,9 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
 import {func, string, bool} from 'prop-types';
 
 import Button from '../../Button';
-import Icon from '../../Icons';
 import Dialog from '../Dialog';
-import styles from './style';
+import * as S from './style';
 
 const DialogImg = ({
   logo,
@@ -20,21 +18,15 @@ const DialogImg = ({
   ...rest
 }) => (
   <Dialog withCustomContainer centerInScreen {...rest}>
-    <View style={styles.dialogContainer}>
+    <S.Container>
       {isCrossEnable ? (
-        <Icon
-          name="star-empty"
-          size={10}
-          color="#000000"
-          style={styles.icon}
-          onPress={crossButtonClick}
-        />
+        <S.CloseIcon name="star-empty" onPress={crossButtonClick} />
       ) : null}
-      <Image style={styles.image} source={logo} />
-      <Text style={styles.title}>{title}</Text>
-      {subtitle ? <Text style={styles.subTitle}>{subtitle}</Text> : null}
-      <Button btnText={buttonText} style={1} click={buttonClick} />
-    </View>
+      <S.ImageDialog source={logo} />
+      <S.TitleText>{title}</S.TitleText>
+      {subtitle ? <S.SubText>{subtitle}</S.SubText> : null}
+      <Button btnText={buttonText} click={buttonClick} mt={10} mb={10} />
+    </S.Container>
   </Dialog>
 );
 

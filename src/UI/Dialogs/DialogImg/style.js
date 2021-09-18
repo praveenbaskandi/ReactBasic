@@ -1,36 +1,45 @@
-import {ScaledSheet} from 'react-native-size-matters';
+import styled from 'styled-components/native';
+import {scale} from 'react-native-size-matters';
 
-import {windowWidth} from '../../../utils/dimension';
+import {Title} from '../../Text';
+import {Colors} from '../../../utils/Colors';
+import Icon from '../../../UI/Icons';
 
-export default ScaledSheet.create({
-  dialogContainer: {
-    alignItems: 'center',
-    alignSelf: 'center',
-    borderRadius: '15@ms',
-    maxWidth: '355@ms',
-    width: '100%',
-    padding: '10@ms',
-    backgroundColor: '#FFFFFF',
-  },
-  title: {
-    alignItems: 'center',
-    color: '#000000',
-    textAlign: 'center',
-    fontSize: '15@ms',
-  },
-  subTitle: {
-    alignItems: 'center',
-    color: '#000000',
-    fontSize: '10@ms',
-    textAlign: 'center',
-  },
-  image: {
-    height: '100@ms',
-    width: '100@ms',
-  },
-  icon: {
-    marginRight: '10@ms',
-    marginTop: '10@ms',
-    alignSelf: 'flex-end',
-  },
-});
+export const Container = styled.View`
+  width: 100%;
+  align-self: center;
+  align-items: center;
+  border-radius: ${scale(15)};
+  max-width: ${scale(300)};
+  background-color: ${Colors.white};
+`;
+
+export const CloseIcon = styled(Icon)`
+  font-size: ${scale(20)};
+  position: absolute;
+  right: ${scale(20)};
+  top: ${scale(20)};
+  color: ${Colors.glBlack};
+`;
+
+export const TitleText = styled(Title)`
+  font-size: ${scale(15)};
+  color: ${Colors.glBlack};
+  text-align: center;
+  line-height: ${scale(15)};
+`;
+
+export const SubText = styled(Title)`
+  font-size: ${scale(10)};
+  color: ${Colors.glBlack};
+  text-align: center;
+  line-height: ${scale(15)};
+`;
+
+export const ImageDialog = styled.Image`
+  height: ${scale(100)};
+  width: ${scale(200)};
+  color: ${Colors.glBlack};
+  text-align: center;
+  line-height: ${scale(15)};
+`;

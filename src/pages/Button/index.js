@@ -13,8 +13,8 @@ const ButtonPage = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Header text={heading} click={navigation.goBack} />
-      <ButtonUI btnText={clickMe} style={1} />
-      <ButtonUI btnText={clickMe} style={2} />
+      <ButtonUI btnText={clickMe} mt={10} />
+      <ButtonUI btnText={clickMe} mt={10} />
     </SafeAreaView>
   );
 };
