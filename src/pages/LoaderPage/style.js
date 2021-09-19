@@ -1,13 +1,6 @@
-import {StyleSheet} from 'react-native';
+import styled from 'styled-components/native';
 
-export default StyleSheet.create({
-  mainContainer: {
-    backgroundColor: '#FFFFFF',
-    flex: 1,
-  },
-  container: {
-    alignSelf: 'center',
-    paddingVertical: 20,
-    justifyContent: 'center',
-  },
-});
+export const Container = styled.View`
+  width: 100%;
+  height: 100%;
+`;

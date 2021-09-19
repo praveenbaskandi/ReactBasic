@@ -1,36 +1,17 @@
 import React from 'react';
-import {TextInput, ScrollView, SafeAreaView} from 'react-native';
 
-import {Colors} from '../../utils/Colors';
 import Header from '../../UI/Header';
-import styles from './style';
+import * as S from './style';
 
 const InputText = ({navigation}) => {
   const heading = 'Input Text Page';
   return (
-    <SafeAreaView style={styles.containerTop}>
+    <S.Container>
       <Header text={heading} click={navigation.goBack} />
-      <ScrollView style={styles.container}>
-        <TextInput
-          style={styles.input1}
-          placeholder="Enter Name"
-          keyboardType="default"
-          placeholderTextColor={Colors.glGrey}
-        />
-        <TextInput
-          style={styles.input2}
-          placeholder="Enter Number"
-          keyboardType="numeric"
-          placeholderTextColor={Colors.glGrey}
-        />
-        <TextInput
-          style={styles.input3}
-          placeholder="Enter Email"
-          keyboardType="default"
-          placeholderTextColor={Colors.glGrey}
-        />
-      </ScrollView>
-    </SafeAreaView>
+      <S.Input placeholder="Enter Name" keyboardType="default" />
+      <S.Input placeholder="Enter Number" keyboardType="numeric" />
+      <S.Input placeholder="Enter Email" keyboardType="default" />
+    </S.Container>
   );
 };
 

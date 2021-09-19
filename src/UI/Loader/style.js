@@ -1,8 +1,8 @@
-import {StyleSheet} from 'react-native';
+import styled from 'styled-components/native';
+import {scale} from 'react-native-size-matters';
+import LottieView from 'lottie-react-native';
 
-export default StyleSheet.create({
-  loader: {
-    height: 20,
-    width: 20,
-  },
-});
+export const Loading = styled(LottieView)`
+  width: ${({w = 0}) => scale(w)};
+  height: ${({h = 0}) => scale(h)};
+`;
