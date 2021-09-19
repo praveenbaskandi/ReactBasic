@@ -28,3 +28,6 @@ Library added in the project
 
 ### Local Async storage
 1. yarn add @react-native-async-storage/async-storage
+
+### Style Component 
+1. yarn add styled-components
