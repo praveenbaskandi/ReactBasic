@@ -31,3 +31,7 @@ Library added in the project
 
 ### Style Component 
 1. yarn add styled-components
+
+### Graph Library 
+1. yarn add react-native-chart-kit
+2. yarn add react-native-svg
