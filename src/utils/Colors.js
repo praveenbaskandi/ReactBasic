@@ -44,6 +44,7 @@ const Colors = {
   glCustomCancel: '#007AFF',
   glDivider: '#d8d8e2',
   glBlue: '#43a1c9',
+  glBackground: '#FAFAFA',
 };
 
 const Fonts = {

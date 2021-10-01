@@ -19,6 +19,8 @@ const DATA = [
   {text: 'Flat List', nav: 'FlatList'},
   {text: 'Toast Page', nav: 'ToastPage'},
   {text: 'Increment Number', nav: 'IncrementNumber'},
+  {text: 'Api Rquest', nav: 'ApiRquestPage'},
+  {text: 'Graph', nav: 'GraphPage'},
 ];
 
 const Home = () => {
