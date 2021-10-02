@@ -21,7 +21,11 @@ const ApiRequestPage = () => {
   return (
     <S.Container>
       <Header text={heading} click={navigation.goBack} />
-      {isLoading ? <Loader size={50} /> : null}
+      {isLoading ? (
+        <S.LoaderView>
+          <Loader size={50} />
+        </S.LoaderView>
+      ) : null}
       {userList.map(item => (
         <S.Text font={10}>{item.name}</S.Text>
       ))}

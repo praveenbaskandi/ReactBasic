@@ -23,3 +23,10 @@ export const Text = styled(Title)`
   text-align: center;
   line-height: ${scale(15)};
 `;
+
+export const LoaderView = styled.View`
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  background-color: ${Colors.white};
+`;

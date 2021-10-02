@@ -15,8 +15,8 @@ const GraphPage = () => {
   const navigation = useNavigation();
   return (
     <S.Container>
+      <Header text={heading} click={navigation.goBack} />
       <S.Scroll>
-        <Header text={heading} click={navigation.goBack} />
         <LineCharView />
         <BarChartView />
         <PieChartView />
