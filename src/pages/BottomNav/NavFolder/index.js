@@ -1,14 +1,13 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
 
-import styles from './style';
+import * as S from './style';
 
 const NavFolder = () => {
   const homeText = 'Folder Screen';
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.textStyle}>{homeText}</Text>
-    </SafeAreaView>
+    <S.Container>
+      <S.Text>{homeText}</S.Text>
+    </S.Container>
   );
 };
 
