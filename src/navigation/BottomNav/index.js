@@ -16,8 +16,8 @@ const BottomNav = () => {
         component={BallScreen}
         options={{
           tabBarLabel: 'ball',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="soccer-ball" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <Icon name="soccer-ball" color={color} size={20} />
           ),
         }}
       />
@@ -26,8 +26,8 @@ const BottomNav = () => {
         component={FolderScreen}
         options={{
           tabBarLabel: 'folder',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="folder" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <Icon name="folder" color={color} size={20} />
           ),
         }}
       />
@@ -36,8 +36,8 @@ const BottomNav = () => {
         component={ThumbScreen}
         options={{
           tabBarLabel: 'thumb',
-          tabBarIcon: ({color, size}) => (
-            <Icon name="thumbs-up-alt" color={color} size={size} />
+          tabBarIcon: ({color}) => (
+            <Icon name="thumbs-up-alt" color={color} size={20} />
           ),
         }}
       />

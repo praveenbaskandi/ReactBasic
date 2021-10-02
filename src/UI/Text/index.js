@@ -33,3 +33,11 @@ export const Title = styled(StyledText)`
   line-height: 15px;
   text-align: center;
 `;
+
+export const BottomTitle = styled(StyledText)`
+  color: ${Colors.primary};
+  font-size: 15px;
+  letter-spacing: 0.44px;
+  line-height: 15px;
+  text-align: center;
+`;
