@@ -1,7 +1,6 @@
 import React from 'react';
 import {SafeAreaView, Button, View, TextField} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {Form, Field} from 'react-final-form';
 import {compose} from 'redux';
 
 import ButtonUI from '../../UI/Button';
@@ -21,8 +20,6 @@ const ReduxFinalForm = () => {
       <Header text={heading} click={navigation.goBack} />
       <ButtonUI btnText={clickMe} style={1} />
       <ButtonUI btnText={clickMe} style={2} />
-
-      <Field name="firstName" component={TextField} placeholder="First Name" />
 
       {/* <Field name="firstName" component={TextField} placeholder="First Name" /> */}
     </SafeAreaView>
