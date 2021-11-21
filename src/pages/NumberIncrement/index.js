@@ -1,11 +1,11 @@
 import React from 'react';
-import {Button, ScrollView, SafeAreaView, View, Text} from 'react-native';
 import {useDispatch} from 'react-redux';
 
 import {updateIncrementData} from '../../redux/number-increment/actions';
 import Header from '../../UI/Header';
+import Button from '../../UI/Button';
 import useSelect from './selector';
-import styles from './style';
+import * as S from './style';
 
 const IncrementNumber = ({navigation}) => {
   const dispatch = useDispatch();
@@ -18,13 +18,13 @@ const IncrementNumber = ({navigation}) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <S.Container>
       <Header text={heading} click={navigation.goBack} />
-      <Text style={styles.textData}>{incrementData}</Text>
-      <View style={styles.buttonViewRound}>
-        <Button color="#f194ff" onPress={onPressButton} title={clickMe} />
-      </View>
-    </SafeAreaView>
+      <S.TextHead>{incrementData}</S.TextHead>
+      <S.ButtonContainer>
+        <Button click={onPressButton} btnText={clickMe} />
+      </S.ButtonContainer>
+    </S.Container>
   );
 };
 export default IncrementNumber;

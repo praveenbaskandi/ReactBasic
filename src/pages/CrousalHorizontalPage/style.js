@@ -1,64 +1,55 @@
-import {StyleSheet} from 'react-native';
+import styled from 'styled-components/native';
 
-import {Colors, Fonts, statusbarHeight} from '../../utils/Colors';
+import {Title} from '../../UI/Text';
+import {Colors} from '../../utils/Colors';
 
-export default StyleSheet.create({
-  pageContainer: {
-    paddingTop: 10,
-  },
-  container: {
-    flexDirection: 'column',
-    flexGrow: 1,
-    paddingTop: statusbarHeight,
-    justifyContent: 'space-between',
-  },
-  buttonText: {
-    fontSize: 15,
-    color: '#FFFFFF',
-    textAlign: 'center',
-  },
-  bottomContainer: {
-    paddingBottom: 20,
-  },
-  dotContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  dotActive: {
-    height: 6,
-    width: 6,
-    marginHorizontal: 6,
-    borderRadius: 6,
-    backgroundColor: Colors.primary,
-  },
-  dotNonActive: {
-    height: 6,
-    width: 6,
-    marginHorizontal: 6,
-    borderRadius: 6,
-    backgroundColor: Colors.primary,
-    opacity: 0.2,
-  },
-  pageHeading: {
-    color: '#252935',
-    fontSize: 16,
-    marginTop: 50,
-    fontFamily: Fonts.muliBlack,
-    lineHeight: 22,
-    alignSelf: 'center',
-  },
-  pageImage: {
-    height: 150,
-    alignSelf: 'center',
-  },
-  pageSubHeading: {
-    color: '#9999ad',
-    fontSize: 14,
-    marginTop: 30,
-    marginHorizontal: 20,
-    textAlign: 'center',
-    fontFamily: Fonts.muliRegular,
-    lineHeight: 22,
-    alignSelf: 'center',
-  },
-});
+export const Container = styled.View`
+  width: 100%;
+  height: 100%;
+  background-color: ${Colors.white};
+`;
+
+export const ScrollView = styled.ScrollView`
+  flex: 1;
+  width: 100%;
+`;
+
+export const DotContainer = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+`;
+
+export const Dot = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  height: 6;
+  width: 6;
+  margin-horizontal: 6;
+  border-radius: 6;
+  background-color: ${({active}) => (active ? Colors.primary : Colors.glGrey)};
+`;
+
+export const BottomContainer = styled.View`
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+
+export const ImageView = styled.Image`
+  height: 150px;
+  align-self: center;
+`;
+
+export const PageView = styled.View`
+  flex: 1;
+  width: ${({width = 0}) => width}px;
+`;
+
+export const TextHead = styled(Title)`
+  color: ${Colors.glBlack};
+  font-size: 15px;
+  margin-horizontal: 20px;
+  line-height: 15px;
+  margin-top: 20px;
+  text-align: center;
+`;

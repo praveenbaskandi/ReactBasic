@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
-import {SafeAreaView, ScrollView, View, Dimensions} from 'react-native';
+import {Dimensions} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import image1 from '../../assets/horizontal-scroll/scroll-one.png';
 import image2 from '../../assets/horizontal-scroll/scroll-two.png';
 import image3 from '../../assets/horizontal-scroll/scroll-three.png';
 import image4 from '../../assets/horizontal-scroll/scroll-four.png';
+import Header from '../../UI/Header';
 import ButtonUI from '../../UI/Button';
 import PageData from './page';
-import styles from './style';
+import * as S from './style';
 
 const DATA = [
   {
@@ -63,11 +65,14 @@ const DATA = [
 const CrousalHorizontalPage = () => {
   const [activeDot, setActiveDot] = useState(0);
   const {width} = Dimensions.get('window');
+  const navigation = useNavigation();
   const clickMe = 'Click Me!';
+  const heading = 'Horizontal Scroll Page';
+
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView
-        style={styles.scroll}
+    <S.Container>
+      <Header text={heading} click={navigation.goBack} />
+      <S.ScrollView
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
@@ -80,19 +85,16 @@ const CrousalHorizontalPage = () => {
         {DATA.map(items => (
           <PageData data={items} />
         ))}
-      </ScrollView>
-      <View style={styles.bottomContainer}>
-        <View style={styles.dotContainer}>
+      </S.ScrollView>
+      <S.BottomContainer>
+        <S.DotContainer>
           {DATA.map((_, i) => (
-            <View
-              style={i === activeDot ? styles.dotActive : styles.dotNonActive}
-              isActive={i === activeDot}
-            />
+            <S.Dot active={i === activeDot} />
           ))}
-        </View>
+        </S.DotContainer>
         <ButtonUI btnText={clickMe} style={2} />
-      </View>
-    </SafeAreaView>
+      </S.BottomContainer>
+    </S.Container>
   );
 };
 

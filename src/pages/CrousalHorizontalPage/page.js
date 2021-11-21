@@ -1,22 +1,16 @@
 import React from 'react';
-import {SafeAreaView, Image, Text, StatusBar, Dimensions} from 'react-native';
 import {shape, string} from 'prop-types';
 
-import styles from './style';
+import {windowWidth} from '../../utils/dimension';
+import * as S from './style';
 
 const PagePage = ({data}) => {
-  const {width} = Dimensions.get('window');
   return (
-    <SafeAreaView style={{width: width}}>
-      <StatusBar
-        barStyle="dark-content"
-        translucent
-        backgroundColor="transparent"
-      />
-      <Text style={styles.pageHeading}>{data.heading}</Text>
-      <Image style={styles.pageImage} source={data.image} />
-      <Text style={styles.pageSubHeading}>{data.subHeading}</Text>
-    </SafeAreaView>
+    <S.PageView width={windowWidth}>
+      <S.TextHead>{data.heading}</S.TextHead>
+      <S.ImageView source={data.image} resizeMode="contain" />
+      <S.TextHead>{data.subHeading}</S.TextHead>
+    </S.PageView>
   );
 };
 

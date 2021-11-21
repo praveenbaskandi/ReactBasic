@@ -20,7 +20,7 @@ const DialogImg = ({
   <Dialog withCustomContainer centerInScreen {...rest}>
     <S.Container>
       {isCrossEnable ? (
-        <S.CloseIcon name="star-empty" onPress={crossButtonClick} />
+        <S.CloseIcon name="bigclose" onPress={crossButtonClick} />
       ) : null}
       <S.ImageDialog source={logo} />
       <S.TitleText>{title}</S.TitleText>

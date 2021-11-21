@@ -6,7 +6,7 @@ import * as S from './style';
 const Header = ({text, click, textFont}) => {
   return (
     <S.Container>
-      <S.BackIcon name="angle-left" onPress={click} />
+      <S.BackIcon name="keyboard_arrow_left" onPress={click} />
       <S.Text font={textFont}>{text}</S.Text>
     </S.Container>
   );

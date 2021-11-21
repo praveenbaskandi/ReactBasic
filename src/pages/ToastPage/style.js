@@ -1,12 +1,11 @@
-import {StyleSheet} from 'react-native';
+import styled from 'styled-components/native';
 
-export default StyleSheet.create({
-  containerTop: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
-  container: {
-    marginTop: 5,
-    paddingHorizontal: 20,
-  },
-});
+export const Container = styled.View`
+  width: 100%;
+  height: 100%;
+`;
+
+export const ButtonContainer = styled.View`
+  width: 100%;
+  margin-top: 20px;
+`;

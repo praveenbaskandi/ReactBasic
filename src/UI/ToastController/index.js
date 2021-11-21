@@ -1,55 +1,28 @@
-import {RNNotificationBanner} from 'react-native-notification-banner';
-
-import {Colors} from '../../utils/Colors';
+import Toast from 'react-native-toast-message';
 
 export const toastSuccess = (title, subTitle) => {
-  return RNNotificationBanner.Show({
-    title: title,
-    subTitle: subTitle,
-    withIcon: false,
-    //   icon: copy,
-    tintColor: Colors.success,
-    titleColor: Colors.white,
-    subTitleColor: Colors.white,
-    isSwipeToDismissEnabled: true,
+  return Toast.show({
+    type: 'success',
+    text1: title,
+    autoHide: true,
+    text2: subTitle,
   });
 };
 
 export const toastError = (title, subTitle) => {
-  return RNNotificationBanner.Show({
-    title: title,
-    subTitle: subTitle,
-    withIcon: false,
-    //   icon: copy,
-    tintColor: Colors.error,
-    titleColor: Colors.white,
-    subTitleColor: Colors.white,
-    isSwipeToDismissEnabled: true,
+  return Toast.show({
+    type: 'error',
+    text1: title,
+    autoHide: true,
+    text2: subTitle,
   });
 };
 
 export const toastWarning = (title, subTitle) => {
-  return RNNotificationBanner.Show({
-    title: title,
-    subTitle: subTitle,
-    withIcon: false,
-    //   icon: copy,
-    tintColor: Colors.warning,
-    titleColor: Colors.white,
-    subTitleColor: Colors.white,
-    isSwipeToDismissEnabled: true,
-  });
-};
-
-export const toastNormal = (title, subTitle) => {
-  return RNNotificationBanner.Show({
-    title: title,
-    subTitle: subTitle,
-    withIcon: false,
-    //   icon: copy,
-    tintColor: Colors.primary,
-    titleColor: Colors.white,
-    subTitleColor: Colors.white,
-    isSwipeToDismissEnabled: true,
+  return Toast.show({
+    type: 'info',
+    text1: title,
+    autoHide: true,
+    text2: subTitle,
   });
 };

@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import {SafeAreaView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import BottomDialog from '../../UI/Dialogs/BottomDialog';
 import ButtonUI from '../../UI/Button';
 import Header from '../../UI/Header';
 import DialogImg from './DialogImgPage';
-import styles from './style';
+import * as S from './style';
 
 const ButtonPage = () => {
   const heading = 'Dialog Page';
@@ -20,7 +19,7 @@ const ButtonPage = () => {
     updateShowBottomDialog(false);
   };
   return (
-    <SafeAreaView style={styles.container}>
+    <S.Container>
       <Header text={heading} click={navigation.goBack} />
       <ButtonUI
         btnText={dialogCenter}
@@ -45,7 +44,7 @@ const ButtonPage = () => {
         btnText="Close Dialog"
         buttonClick={hideDialog}
       />
-    </SafeAreaView>
+    </S.Container>
   );
 };
 

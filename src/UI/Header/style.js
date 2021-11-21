@@ -1,14 +1,16 @@
 import styled from 'styled-components/native';
 import {scale, verticalScale} from 'react-native-size-matters';
 
+import {statusbarHeight} from '../../utils/dimension';
 import {Colors} from '../../utils/Colors';
 import {Title} from '../Text';
 import Icon from '../../UI/Icons';
 
 export const Container = styled.View`
   width: 100%;
+  margin-top: ${statusbarHeight};
   background-color: ${Colors.white};
-  height: ${verticalScale(50)};
+  height: ${verticalScale(40)};
   justify-content: center;
   align-items: center;
   flex-direction: row;

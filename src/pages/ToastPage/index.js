@@ -1,5 +1,4 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {
@@ -10,7 +9,7 @@ import {
 } from '../../UI/ToastController';
 import Header from '../../UI/Header';
 import Button from '../../UI/Button';
-import styles from './style';
+import * as S from './style';
 
 const ToastPage = () => {
   const heading = 'Toast Page';
@@ -37,21 +36,21 @@ const ToastPage = () => {
   };
 
   return (
-    <SafeAreaView style={styles.containerTop}>
+    <S.Container>
       <Header text={heading} click={navigation.goBack} />
-      <View style={styles.container}>
+      <S.ButtonContainer>
         <Button click={onPressSuccess} btnText={clickMeSuccess} />
-      </View>
-      <View style={styles.container}>
+      </S.ButtonContainer>
+      <S.ButtonContainer>
         <Button click={onPressError} btnText={clickMeError} />
-      </View>
-      <View style={styles.container}>
+      </S.ButtonContainer>
+      <S.ButtonContainer>
         <Button click={onPressWarning} btnText={clickMeWarning} />
-      </View>
-      <View style={styles.container}>
+      </S.ButtonContainer>
+      <S.ButtonContainer>
         <Button click={onPressNormal} btnText={clickMeNormal} />
-      </View>
-    </SafeAreaView>
+      </S.ButtonContainer>
+    </S.Container>
   );
 };
 export default ToastPage;

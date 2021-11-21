@@ -1,9 +1,9 @@
 import React from 'react';
-import {SafeAreaView, FlatList, View, Text} from 'react-native';
+import {FlatList} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import Header from '../../UI/Header';
-import styles from './style';
+import * as S from './style';
 
 const DATA = [
   {text: '1', word: 'One'},
@@ -25,21 +25,21 @@ const ButtonPage = () => {
   const navigation = useNavigation();
 
   const renderItem = ({item}) => (
-    <View id={item.text} style={styles.containerView}>
-      <Text style={styles.buttonText}>{item.text}</Text>
-      <Text style={styles.buttonText}>{item.word}</Text>
-    </View>
+    <S.ItemContainer id={item.text}>
+      <S.Text>{item.text}</S.Text>
+      <S.Text>{item.word}</S.Text>
+    </S.ItemContainer>
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <S.Container>
       <Header text={heading} click={navigation.goBack} />
       <FlatList
         data={DATA}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
-    </SafeAreaView>
+    </S.Container>
   );
 };
 

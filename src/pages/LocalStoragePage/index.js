@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, View, Text, TextInput} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import LocalStorage from '../../utils/localStorage';
 import ButtonUI from '../../UI/Button';
 import Header from '../../UI/Header';
 import {Colors} from '../../utils/Colors';
-import styles from './style';
+import * as S from './style';
 
 const LocalStoragePage = () => {
   const [enterText, setEnterText] = useState('');
@@ -30,20 +29,19 @@ const LocalStoragePage = () => {
   };
 
   return (
-    <SafeAreaView style={styles.containerTop}>
+    <S.Container>
       <Header text={heading} click={navigation.goBack} />
-      <View style={styles.container}>
-        <Text style={styles.textStyle}>{localText}</Text>
-        <TextInput
-          style={styles.input1}
+      <S.MidContainer>
+        <S.Text>{localText}</S.Text>
+        <S.Input
           placeholder="Enter Name"
           keyboardType="default"
           onChangeText={text => setEnterText(text)}
           placeholderTextColor={Colors.glGrey}
         />
         <ButtonUI btnText={clickMe} style={1} click={setDataLocally} />
-      </View>
-    </SafeAreaView>
+      </S.MidContainer>
+    </S.Container>
   );
 };
 export default LocalStoragePage;
